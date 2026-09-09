@@ -1,0 +1,4 @@
+# Core reproducible environment. Install the neural extra separately when needed:
+# python -m pip install -e ".[neural,dev]"
+-e .
+

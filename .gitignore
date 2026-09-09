@@ -1,0 +1,20 @@
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Private course and company material
+archive/
+data/raw/*
+!data/raw/.gitkeep
+
+# Generated model artifacts and forecasts
+outputs/*
+!outputs/.gitkeep
+lightning_logs/
+checkpoints/
+*.ckpt
+*.joblib

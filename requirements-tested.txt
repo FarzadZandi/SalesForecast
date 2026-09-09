@@ -1,0 +1,13 @@
+# Direct dependencies used for the validated Windows/Python 3.12 benchmark.
+# Install with: python -m pip install -r requirements-tested.txt
+-e .
+mlforecast==1.1.0
+neuralforecast==3.0.1
+numpy==2.2.6
+pandas==2.2.3
+pytest==9.1.1
+ruff==0.16.6
+scikit-learn==1.6.1
+statsforecast==2.1.1
+torch==2.6.0
+utilsforecast==0.2.12

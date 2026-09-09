@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sales-forecast"
+version = "1.0.0"
+description = "Leakage-safe weekly sales forecasting with statistical, machine-learning, and neural models."
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "mlforecast>=1.0,<2",
+    "numpy>=1.26,<3",
+    "pandas>=2.2,<3",
+    "scikit-learn>=1.5,<2",
+    "statsforecast>=2.0,<3",
+    "utilsforecast>=0.2,<1",
+]
+
+[project.optional-dependencies]
+neural = ["neuralforecast>=3.0,<4"]
+dev = ["pytest>=8,<10", "ruff>=0.12,<1"]
+
+[project.scripts]
+sales-forecast = "sales_forecast.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["sales_forecast*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["archive", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
